@@ -1,0 +1,88 @@
+CHULETA DE COMANDOS PARA GIT
+
+Crear usuario en git:
+git config --global user.name <tu--nombre>
+git config --global user.email <tu--email>
+
+Seleccionar nuestro editor preferido:
+git config ----global core.editor “code --wait”
+(NOTA: en el comando de ejemplo elegimos a VS Code, pero se puede elegir cualquier editor de preferencia. Por ejemplo:
+git config --global core.editor [kwrite], [nano], ect.)
+
+Configurar [core.autocrlf] (saltos de líneas de Linux--MacOS y Windows):
+git config ----gobal core.autocrlf imput	<==== En máquinas con  Linux o MacOS
+git config ----gobal core.autocrlf True	<==== En máquinas con Windows
+
+Visualizar archivo de configuración de git:
+git config ----global -e
+
+Iniciar seguimiento de git (crear un repositorio local):
+git init 
+
+Iniciar seguimiento de git (crear un repositorio local con rama predeterminada):
+git config ----global init.defaultBranch <nombre_de_tu_rama>
+
+Cambiar nombre de la rama:
+git branch --m <nombre_de_tu_rama>
+
+Ver estado de seguimiento:
+git status
+git status --s	<==== para ver información simplificada
+
+Ver los cambios realizados dentro del archivo:
+git diff
+
+Añadir fichero/s al ‘staging area’ (área de preparación):
+git add <nombre_fichero.extension>
+
+Ver los cambios dentro del archivo agregado al 'stage:
+git diff --staged
+
+Sacar fichero del ‘staging area’ (el área de preparación):
+git rm --cached <nombre_fichero.extension>
+
+STASH (esconder ?):
+Este comando se utiliza para poner en espera cambios que no hayamos terminado, para luego volver a trabajar con ellos. El comando es:
+git stash
+
+Para listar los stash:
+git stash list
+
+Recuperar un stash:
+git stash pop
+
+Eliminar un stash:
+git stash drop
+
+Crear commits desde la terminal:
+git commit --m “[__escribe_aqui_tu_commit__]”
+
+Comprobar registros de commits:
+git log
+
+Comprobar registros de commits más detallado:
+git log --oneline --decorate --all --graph
+git log --graph --pretty=oneline
+
+Crear nueva rama:
+git branch <nombre_de_la_rama>
+git checkout -b <nombre_rama>
+
+Cambiar de rama:
+git switch <nombre_rama>
+git checkout <nombre_rama>
+
+CREAR ALIAS:
+(Cuando ya estemos familiarizados con los comandos de git, podemos crear alias para simplificar nusetra tarea diaria.)
+git config ----global alias.[nombre_alias] “(comando_asociado)”
+‘ejemplo:’
+git config ----global alias.tree “log ----oneline ----decorate ----all ----graph”
+‘el resultado debería ser así’
+git tree
+(se ejecuta el comando {log ----oneline ----decorate ----all ----graph}
+
+
+TRABAJAR CON GITHUB DESDE GIT
+
+
+
